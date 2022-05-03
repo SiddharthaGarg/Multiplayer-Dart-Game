@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
     public static int scoreCount = 0;
     [SerializeField] private TextMeshProUGUI score_text;
     [SerializeField] private TextMeshProUGUI DartText;
-    bool input_enabled = true;
+    public static bool input_enabled = true;
     private void Start()
     {
         input_enabled = true;

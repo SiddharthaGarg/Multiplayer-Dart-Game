@@ -22,7 +22,7 @@ public class PlayerCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rotationAllowed)
+        if (rotationAllowed && PlayerManager.input_enabled)
         {
             mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
             mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
