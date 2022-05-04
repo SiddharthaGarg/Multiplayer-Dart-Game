@@ -20,7 +20,6 @@ public class PlayerManager : MonoBehaviour
     [Header("Throwing")]
     public KeyCode throwKey = KeyCode.Mouse0;
     public float throwForce;
-    public float throwUpwardForce;
 
     bool readyToThrow;
     //score text
@@ -71,9 +70,8 @@ public class PlayerManager : MonoBehaviour
             forceDirection = (hit.point - attackPoint.position).normalized;
         }
 
-        // add force
-        Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
-
+        // add force 
+        Vector3 forceToAdd = forceDirection * throwForce;
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
         totalThrows--;

@@ -29,10 +29,6 @@ public class ObjectHandler : MonoBehaviour
          }
          Destroy(gameObject);
      }*/
-    bool circle2 = false;
-    bool circle1 = false;
-    bool bullseye = false;
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -46,13 +42,11 @@ public class ObjectHandler : MonoBehaviour
         {
             Debug.Log("inner circle entered");
             PlayerManager.scoreCount += 15;
-            circle1 = true;
         }
         if (other.gameObject.name == "Bullseye")
         {
             Debug.Log("bulls eye entered");
             PlayerManager.scoreCount += 25;
-            bullseye = true;
         }
     }
     private void OnCollisionEnter(Collision other)
